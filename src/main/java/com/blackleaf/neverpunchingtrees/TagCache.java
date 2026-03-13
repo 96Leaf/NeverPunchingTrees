@@ -1,0 +1,66 @@
+package com.blackleaf.neverpunchingtrees;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class TagCache {
+    private static final List<TagKey<Block>> MINEABLE_TAGS = new ArrayList<>();
+    private static final List<TagKey<Item>> TOOL_TAGS = new ArrayList<>();
+    private static final Map<TagKey<Block>, TagKey<Item>> PREFERRED_MAP = new HashMap<>();
+
+    public static void refreshCache() {
+        MINEABLE_TAGS.clear();
+        TOOL_TAGS.clear();
+
+        var blockTag = ForgeRegistries.BLOCKS.tags();
+        if (blockTag != null) {
+            blockTag.getTagNames().forEach(tagKey -> {
+                if (tagKey.location().getPath().contains("mineable")) {
+                    MINEABLE_TAGS.add(tagKey);
+                }
+            });
+        }
+
+        var itemTag = ForgeRegistries.ITEMS.tags();
+        if (itemTag != null) {
+            itemTag.getTagNames().forEach(tagKey -> {
+                ResourceLocation loc = tagKey.location();
+                if ("forge".equals(loc.getNamespace()) && loc.getPath().startsWith("tools/")) {
+                    TOOL_TAGS.add(tagKey);
+                }
+            });
+        }
+
+        buildPreferredMap();
+
+    }
+
+    private static void buildPreferredMap() {
+        for (TagKey<Block> blockTag : MINEABLE_TAGS) {
+            String path = blockTag.location().getPath();
+            String keyword = path.substring(path.lastIndexOf('/') + 1);
+            String pluralKeyword = keyword + "s";
+
+            for (TagKey<Item> itemTag : TOOL_TAGS) {
+                String itemPath = itemTag.location().getPath();
+
+                if (itemPath.endsWith("/" + keyword) || itemPath.endsWith("/" + pluralKeyword)) {
+                    PREFERRED_MAP.put(blockTag, itemTag);
+                    break;
+                }
+            }
+        }
+    }
+
+    public static Map<TagKey<Block>, TagKey<Item>> getPreferredMap() {
+        return PREFERRED_MAP;
+    }
+}

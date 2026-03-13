@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#minecraft:shovels",
+    {
+      "id": "#c:shovels",
+      "required": false
+    }
+  ]
+}
