@@ -1,4 +1,4 @@
-This is a mod that prevents player to break blocks without tools.
+This is a mod that prevents player to break blocks without tools.  
 This mod was inspired by [No Tree Punching](https://www.curseforge.com/minecraft/mc-mods/no-tree-punching) by [AlcatrazEscapee](https://www.curseforge.com/members/alcatrazescapee/projects), but simpler.
 
 Unlike other mods of this type, this mod makes not only logs but also all blocks unbreakable by hand.  
