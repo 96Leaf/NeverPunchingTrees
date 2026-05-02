@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:dirt",
+    "#minecraft:sand",
+    "#minecraft:leaves",
+    "#minecraft:torches",
+    { "id": "#c:sands", "required": false },
+    { "id": "#c:gravels", "required": false }
+  ],
+  "remove": [
+    "minecraft:moss_block",
+    "minecraft:mud",
+    "minecraft:muddy_mangrove_roots"
+  ]
+}
