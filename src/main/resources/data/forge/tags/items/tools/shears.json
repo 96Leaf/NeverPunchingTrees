@@ -1,9 +1,7 @@
 {
+  "replace": false,
   "values": [
-    "#forge:shears",
-    {
-      "id": "#c:shears",
-      "required": false
-    }
+    "minecraft:shears",
+    { "id": "#forge:shears", "required": false }
   ]
 }

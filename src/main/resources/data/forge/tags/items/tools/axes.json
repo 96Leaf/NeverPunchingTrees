@@ -1,9 +1,7 @@
 {
+  "replace": false,
   "values": [
     "#minecraft:axes",
-    {
-      "id": "#c:axes",
-      "required": false
-    }
+    { "id": "#c:axes", "required": false }
   ]
 }

@@ -1,9 +1,7 @@
 {
+  "replace": false,
   "values": [
     "#minecraft:pickaxes",
-    {
-      "id": "#c:pickaxes",
-      "required": false
-    }
+    { "id": "#c:pickaxes", "required": false }
   ]
 }

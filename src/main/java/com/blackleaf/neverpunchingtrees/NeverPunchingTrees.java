@@ -79,7 +79,7 @@ public class NeverPunchingTrees {
                 needsCorrectTool = hasMineableTag && !hasCorrectTool;
             }
 
-            if(!state.is(BREAKABLE) && !stack.is(CANBREAK) || needsCorrectTool) {
+            if(!state.is(BREAKABLE) && (!stack.is(CANBREAK) || needsCorrectTool)) {
                 event.setCanceled(true);
             }
         }

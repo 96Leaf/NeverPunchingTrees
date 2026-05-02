@@ -19,6 +19,7 @@ public class TagCache {
     public static void refreshCache() {
         MINEABLE_TAGS.clear();
         TOOL_TAGS.clear();
+        PREFERRED_MAP.clear();
 
         var blockTag = ForgeRegistries.BLOCKS.tags();
         if (blockTag != null) {

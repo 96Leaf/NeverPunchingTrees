@@ -3,7 +3,14 @@
   "values": [
     "#minecraft:dirt",
     "#minecraft:sand",
-    "#forge:gravel",
-    "#minecraft:leaves"
+    "#minecraft:leaves",
+    "#minecraft:torches",
+    { "id": "#forge:sands", "required": false },
+    { "id": "#forge:gravels", "required": false }
+  ],
+  "remove": [
+    "minecraft:moss_block",
+    "minecraft:mud",
+    "minecraft:muddy_mangrove_roots"
   ]
 }
