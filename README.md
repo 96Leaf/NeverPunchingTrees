@@ -15,5 +15,5 @@ The features of this mod are managed by tags.
 To add/remove thease blocks/items of tags, you can use **datapacks**.  
 Alternatively, use mods that supports tag editing, such as [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs).
 
-The config file contains several settings, such as “Require preferred tool”.
+The config file contains several settings, such as “Require preferred tool”.  
 To change the settings, you can either edit the file directly or use [Configured](https://www.curseforge.com/minecraft/mc-mods/configured) to adjust them in-game.
