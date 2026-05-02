@@ -10,8 +10,8 @@ I recommend using this mod in conjunction with another mod that contains primiti
 However, you can find a way to get started with this mod alone.
 
 The features of this mod are managed by tags.
-- Blocks that can still be broken by hand have the tag "neverpunchingtrees:breakable".  
-- Items that are considered tools have the tag "neverpunchingtrees:canbreak".  
+- Blocks that can still be broken by hand have the tag "neverpunchingtrees:breakable".
+- Items that are considered tools have the tag "neverpunchingtrees:canbreak".
 To add/remove thease blocks/items of tags, you can use **datapacks**.  
 Alternatively, use mods that supports tag editing, such as [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs).
 
